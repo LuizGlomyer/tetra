@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dgls4xvu7r1jb"
+path="res://.godot/imported/JMH Cthulhumbus.otf-53b40ea7a62955191080d063764e0b34.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/JMH Cthulhumbus/JMH Cthulhumbus.otf"
+dest_files=["res://.godot/imported/JMH Cthulhumbus.otf-53b40ea7a62955191080d063764e0b34.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
