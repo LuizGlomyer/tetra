@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://brnoahkh3h1qn"]
+
+[ext_resource type="FontFile" uid="uid://dfdqruofissm7" path="res://assets/fonts/coolvetica/coolvetica rg.otf" id="1_ebc61"]
+
+[resource]
+font = ExtResource("1_ebc61")
+font_size = 32
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.541176)

@@ -1,0 +1,78 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://d1c0123o2o6dc"]
+
+[ext_resource type="StyleBox" uid="uid://vba43aic8hef" path="res://resources/themes/checkbox.tres" id="1_q8se1"]
+[ext_resource type="StyleBox" uid="uid://dc5t2t3nl4cuv" path="res://resources/themes/panel_button.tres" id="2_kn76h"]
+[ext_resource type="FontFile" uid="uid://dfdqruofissm7" path="res://assets/fonts/coolvetica/coolvetica rg.otf" id="3_dagqb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahln5"]
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+border_color = Color(0.45, 0.4368, 0.4005, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.470588, 0.32549, 0.32549, 0.788235)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3pm8"]
+bg_color = Color(0.53, 0.53, 0.53, 1)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+border_color = Color(0.45, 0.4368, 0.4005, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgvd4"]
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+border_color = Color(0.45, 0.4368, 0.4005, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.470588, 0.32549, 0.32549, 0.788235)
+shadow_size = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xi7eo"]
+grow_begin = -1.0
+grow_end = -9.0
+thickness = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klnk4"]
+bg_color = Color(0.549462, 0.57707, 0.82813, 1)
+
+[resource]
+default_font = ExtResource("3_dagqb")
+CheckBox/styles/focus = SubResource("StyleBoxFlat_ahln5")
+CheckBox/styles/hover = SubResource("StyleBoxFlat_p3pm8")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_jgvd4")
+CheckBox/styles/normal = ExtResource("1_q8se1")
+CheckBox/styles/pressed = ExtResource("1_q8se1")
+HSlider/styles/slider = SubResource("StyleBoxLine_xi7eo")
+PanelContainer/styles/panel = ExtResource("2_kn76h")
+PanelContainer/styles/panel_bg = SubResource("StyleBoxFlat_klnk4")

@@ -1,0 +1,165 @@
+[gd_scene load_steps=10 format=3 uid="uid://df6mu6dc13gie"]
+
+[ext_resource type="Theme" uid="uid://d1c0123o2o6dc" path="res://resources/themes/main_theme.tres" id="1_mka2y"]
+[ext_resource type="Script" path="res://scenes/ui/options_screen/options_screen.gd" id="1_rjw4a"]
+[ext_resource type="Shader" path="res://scenes/ui/options_screen/options_screen.gdshader" id="3_krxeg"]
+[ext_resource type="Texture2D" uid="uid://b3w4ribxcfw8l" path="res://assets/images/bg_main.png" id="4_72sup"]
+[ext_resource type="LabelSettings" uid="uid://bnnju2328xaep" path="res://resources/themes/font_96_shadow.tres" id="5_uuwcp"]
+[ext_resource type="LabelSettings" uid="uid://brnoahkh3h1qn" path="res://resources/themes/font_32_shadow.tres" id="6_7r1fy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uh4qa"]
+shader = ExtResource("3_krxeg")
+
+[sub_resource type="Gradient" id="Gradient_adptf"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_wyqxj"]
+
+[node name="OptionsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mka2y")
+script = ExtResource("1_rjw4a")
+metadata/_edit_vertical_guides_ = [729.0]
+
+[node name="ColorRect" type="TextureRect" parent="."]
+self_modulate = Color(0.24, 0.18848, 0.1056, 1)
+material = SubResource("ShaderMaterial_uh4qa")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_72sup")
+stretch_mode = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ColorRect"]
+amount = 800
+lifetime = 2.0
+randomness = 1.0
+direction = Vector2(1, 1)
+spread = 59.25
+gravity = Vector2(10, 10)
+initial_velocity_min = 66.67
+initial_velocity_max = 304.17
+tangential_accel_max = 55.15
+scale_amount_min = 10.0
+scale_amount_max = 10.0
+color_ramp = SubResource("Gradient_adptf")
+color_initial_ramp = SubResource("Gradient_wyqxj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 32
+
+[node name="Panel" type="PanelContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/Panel"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="ColorRect/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Options"
+label_settings = ExtResource("5_uuwcp")
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/h_separation = 48
+theme_override_constants/v_separation = 16
+columns = 2
+
+[node name="MusicLabel" type="Label" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Music"
+label_settings = ExtResource("6_7r1fy")
+
+[node name="MusicSlider" type="HSlider" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SoundEffectsLabel" type="Label" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Sounds Effects"
+label_settings = ExtResource("6_7r1fy")
+
+[node name="SoundEffectsSlider" type="HSlider" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="LanguageLabel" type="Label" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Language"
+label_settings = ExtResource("6_7r1fy")
+
+[node name="LanguageSelector" type="OptionButton" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Portuguese"
+popup/item_1/id = 1
+popup/item_2/text = "Japanese"
+popup/item_2/id = 2
+
+[node name="ResolutionLabel" type="Label" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Resolution
+"
+label_settings = ExtResource("6_7r1fy")
+
+[node name="ResolutionSelector" type="OptionButton" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+item_count = 5
+selected = 1
+popup/item_0/text = "640 ✕ 360"
+popup/item_0/id = 0
+popup/item_1/text = "1280 ✕ 720"
+popup/item_1/id = 1
+popup/item_2/text = "1366 ✕ 768"
+popup/item_2/id = 2
+popup/item_3/text = "1600 ✕ 900"
+popup/item_3/id = 3
+popup/item_4/text = "1920 ✕ 1080"
+popup/item_4/id = 4
+
+[node name="FullscreenLabel" type="Label" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Fullscreen"
+label_settings = ExtResource("6_7r1fy")
+
+[node name="FullscreenCheckbox" type="CheckBox" parent="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Active"
+alignment = 2
+
+[connection signal="value_changed" from="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="drag_ended" from="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer/SoundEffectsSlider" to="." method="_on_sound_effects_slider_drag_ended"]
+[connection signal="value_changed" from="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer/SoundEffectsSlider" to="." method="_on_sound_effects_slider_value_changed"]
+[connection signal="pressed" from="ColorRect/MarginContainer/Panel/VBoxContainer/GridContainer/FullscreenCheckbox" to="." method="_on_fullscreen_checkbox_pressed"]

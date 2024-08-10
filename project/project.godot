@@ -12,12 +12,20 @@ config_version=5
 
 config/name="Tetra"
 config/version="0.1"
+run/main_scene="res://scenes/ui/splash_screen/splash_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 boot_splash/bg_color=Color(0.35, 0.1932, 0.154, 1)
 boot_splash/image="res://assets/images/icon.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://assets/images/icon.png"
+
+[autoload]
+
+SignalManager="*res://singletons/signal_manager.gd"
+SceneManager="*res://singletons/scene_manager.gd"
+TransitionScreen="*res://scenes/singletons/transition_screen/transition_screen.tscn"
+AudioManager="*res://scenes/singletons/audio_manager/audio_manager.tscn"
 
 [display]
 
