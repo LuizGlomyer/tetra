@@ -14,7 +14,12 @@ enum BGM {
 
 enum SFX {
 	SPLASH_SCREEN,
-	LOAD,
+	SELECT,
+	ENTER,
+	LEAVE,
+	SHUFFLE,
+	DRAW_CARD,
+	SET_CARD,
 }
 
 const audio_bus_list: Dictionary = {
@@ -31,7 +36,12 @@ const bgm_list: Dictionary = {
 
 const sfx_list: Dictionary = {
 	SFX.SPLASH_SCREEN: preload("res://assets/sfx/GUI_Sound_Effects_by_Lokif/misc_sound.wav"),
-	SFX.LOAD: preload("res://assets/sfx/GUI_Sound_Effects_by_Lokif/load.wav")
+	SFX.SELECT: preload("res://assets/sfx/GUI_Sound_Effects_by_Lokif/load.wav"),
+	SFX.ENTER: preload("res://assets/sfx/ui_pack_1/MENU A_Select.wav"),
+	SFX.LEAVE: preload("res://assets/sfx/ui_pack_1/MENU A - Back.wav"),
+	SFX.SHUFFLE: preload("res://assets/sfx/shuffle.wav"),
+	SFX.DRAW_CARD: preload("res://assets/sfx/cockatrice cardsounds/draw.wav"),
+	SFX.SET_CARD: preload("res://assets/sfx/cockatrice cardsounds/playcard.wav"),
 }
 
 
